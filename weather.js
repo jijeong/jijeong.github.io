@@ -1,10 +1,10 @@
 const weather = document.querySelector(".js-weather");
-const API_KEY = key.API_KEY; // import / hide api
+const code = C.code; // import / hide api
 const COORDS = 'coords';
 
 function getWeather(lat, lng){
     fetch(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${code}&units=metric`
     )
         .then(function(response) {
             return response.json();
