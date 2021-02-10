@@ -94,7 +94,6 @@ function getContrast(hexcolor){
 // Set the color/BG color
 const body = document.querySelector('body');
 const bgColor = createColor();
-//body.textContent = bgColor;
 body.style.backgroundColor = bgColor;
 body.style.color = getContrast(bgColor);
 body.style.borderColor = bgColor;
