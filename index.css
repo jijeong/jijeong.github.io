@@ -2,33 +2,73 @@ html { height: 100%; }
 
 
 body {
-    background-color: slategray;
     min-height: 100%;
+    margin: 0;
+    transition: color .5s ease-in-out; 
 }
 
 h1 {
-    color : white;
-    margin-left : 2vw;
     font-size: 23vw;
     line-height: .8;
-    transition: color .5s ease-in-out; 
     margin-top: auto;
     margin-bottom: auto;
-    position: fixed;
     bottom : 0;
 }
 
-.container {
-    display :grid;
-    height: calc(100vh);
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:
-    "   main    main    b   "
+h4 {
+    margin: 0;
 }
 
-.btn {
-    cursor: pointer;
+ul {
+    list-style-type: none;
+    padding: 0;
 }
+
+button {
+    cursor: pointer;
+    margin-right: 1vw;
+    background: none;
+    border: none;
+    /*
+    margin-bottom: .3vw;
+    background: rgba(255, 255, 255, 0.1);
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4.5px );
+-webkit-backdrop-filter: blur( 4.5px );
+border: 1px solid rgba( 255, 255, 255, 0.1 );
+*/
+}
+
+
+.container {
+    display :grid;
+    height: 100vh;
+    box-sizing: border-box;
+    padding-top : 2em;
+    padding-bottom: 2em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    "   a    b    c   "
+}
+
+.a{  
+    grid-area: a;
+    padding-left: 2vw;
+}
+
+.b{
+    grid-area: b;
+    padding-left: 1vw;
+    border-left: 1px solid;
+
+}
+
+.c {
+    grid-area: c;
+    padding-left: 1vw;
+    border-left: 1px solid;
+}
+
 
 .clicked {
     color : black; 
@@ -54,6 +94,13 @@ h1 {
     animation: fadeIn .5s linear;
 }
 
+.time,
+.min,
+.sec{
+    position : fixed;
+    letter-spacing: -.8rem;
+}
+
 @keyframes fadeIn {
     from{
         opacity: 0;
@@ -62,17 +109,7 @@ h1 {
     }
 }
 
-
-
-.js-toDoForm {
-    grid-area: b;
-    border-left: 1px solid #1e1e1e;
-}
-
-.js-toDoList{
-    grid-area: b;
-}
-
 ::-webkit-scrollbar {
     display: none;
 }
+

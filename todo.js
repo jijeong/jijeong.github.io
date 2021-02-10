@@ -33,8 +33,8 @@ function paintToDo(text){ // 14_Todo 생성 (*매개변수)
 
 
     span.innerText = text // 21_span 안에 (*매개변수) 삽입
-    li.appendChild(span); //  22_span을 li의 child element로 삽입
     li.appendChild(delBtn); //  23_delBtn을 li의 child element로 삽입
+    li.appendChild(span); //  22_span을 li의 child element로 삽입
     li.id = idNum;
     toDoList.appendChild(li); // 24_li를 toDoLIst 클래스의 child element로 삽입
 
