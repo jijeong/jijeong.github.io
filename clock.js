@@ -18,10 +18,3 @@ function init() {
 }
 
 init(); //init 함수 실행
-
-/*
-setInterval ()
-
-seconds < 10 ? `0${seconds}`:seconds
-= 초가 10보다 작다면 ? 초 앞에 0을 붙일거고 : 그게 아니라면 그냥 초를 보여줄거야
-*/
